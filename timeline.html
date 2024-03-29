@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	
+	.tileline {
+		position:relative;
+		counter-reset: section;
+
+	}
+
+	.tileline:before {
+		position: absolute;
+		content: '';
+		width: 1px;
+		height: 100%;
+		background-color: #fff;
+		left: -20px;
+	}
+	.tileline-content {
+		position: relative;
+/*		counter-reset: section;*/
+	}
+	.tileline-content:before {
+		position: absolute;
+		content: 'Section " counter(section';
+		width: 32px;
+		height: 32px;
+		background-color: #fff;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+</style>
+<body>
+
+
+	<div class="tileline">
+		<div class="tileline-content">
+			<h3>Heading</h3>
+			<p>Text</p>
+		</div>
+	</div>
+	
+</body>
+</html>
